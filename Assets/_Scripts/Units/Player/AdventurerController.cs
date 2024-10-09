@@ -1,3 +1,4 @@
+using Assets._Scripts.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -60,7 +61,7 @@ public class AdventurerController : PlayerUnitBase
         private set
         {
             _isMoving = value;
-            animator.SetBool("IsMoving", value);
+            animator.SetBool(AnimationStrings.IsMoving, value);
         }
     }
 
@@ -76,7 +77,7 @@ public class AdventurerController : PlayerUnitBase
         private set
         {
             _isRunning = value;
-            animator.SetBool("IsRunning", value);
+            animator.SetBool(AnimationStrings.IsRunning, value);
         }
     }
 
