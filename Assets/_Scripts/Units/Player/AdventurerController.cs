@@ -1,29 +1,14 @@
-using Assets._Scripts.Utilities;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class AdventurerController : PlayerUnitBase
 {
-    //[SerializeField] private AudioClip _someSound;
-
-    //void Start() {
-    //    // Example usage of a static system
-    //    AudioSystem.Instance.PlaySound(_someSound);
-    //}
-
-    //public override void ExecuteMove() {
-    //    // Perform tarodev specific animation, do damage, move etc.
-    //    // You'll obviously need to accept the move specifics as an argument to this function. 
-    //    // I go into detail in the Grid Game #2 video
-    //    base.ExecuteMove(); // Call this to clean up the move
-    //}
-
     public float walkSpeed = 5.0f;
-    public float runSpeed = 10.0f;
+    public float runSpeed = 8.0f;
+    public float jumpImpulse = 10.0f;
+    Vector2 moveInput;
+    TouchingDirections touchingDirections;
 
     public float CurrentMoveSpeed
     {
@@ -47,7 +32,6 @@ public class AdventurerController : PlayerUnitBase
         }
     }
 
-    Vector2 moveInput;
 
     [SerializeField]
     private bool _isMoving = false;
@@ -61,7 +45,7 @@ public class AdventurerController : PlayerUnitBase
         private set
         {
             _isMoving = value;
-            animator.SetBool(AnimationStrings.IsMoving, value);
+            animator.SetBool(AnimationStrings.isMoving, value);
         }
     }
 
@@ -77,7 +61,7 @@ public class AdventurerController : PlayerUnitBase
         private set
         {
             _isRunning = value;
-            animator.SetBool(AnimationStrings.IsRunning, value);
+            animator.SetBool(AnimationStrings.isRunning, value);
         }
     }
 
@@ -108,6 +92,7 @@ public class AdventurerController : PlayerUnitBase
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        touchingDirections = GetComponent<TouchingDirections>();
     }
 
     private void Update()
@@ -118,6 +103,7 @@ public class AdventurerController : PlayerUnitBase
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -152,6 +138,15 @@ public class AdventurerController : PlayerUnitBase
         else if (context.canceled)
         {
             IsRunning = false;
+        }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if(context.started && touchingDirections.IsGrounded)
+        {
+            animator.SetTrigger(AnimationStrings.jump);
+            rb.velocity = new Vector2 (rb.velocity.x, jumpImpulse);
         }
     }
 }
