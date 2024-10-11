@@ -15,6 +15,11 @@ public class AdventurerController : PlayerUnitBase
     {
         get
         {
+            if(!CanMove)
+            {
+                return 0;
+            }
+
             if (IsMoving && !touchingDirections.IsOnWall)
             {
                 if (touchingDirections.IsGrounded)
@@ -96,6 +101,15 @@ public class AdventurerController : PlayerUnitBase
     Rigidbody2D rb;
     Animator animator;
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+        private set { }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -151,10 +165,10 @@ public class AdventurerController : PlayerUnitBase
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if(context.started && touchingDirections.IsGrounded)
+        if (context.started && CanMove && touchingDirections.IsGrounded)
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
-            rb.velocity = new Vector2 (rb.velocity.x, jumpImpulse);
+            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
         }
     }
 
