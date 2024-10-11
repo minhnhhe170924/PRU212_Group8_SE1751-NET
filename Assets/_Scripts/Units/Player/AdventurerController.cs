@@ -7,6 +7,7 @@ public class AdventurerController : PlayerUnitBase
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
     public float jumpImpulse = 10.0f;
+    public float airWalkSpeed = 3.0f;
     Vector2 moveInput;
     TouchingDirections touchingDirections;
 
@@ -14,15 +15,22 @@ public class AdventurerController : PlayerUnitBase
     {
         get
         {
-            if (IsMoving)
+            if (IsMoving && !touchingDirections.IsOnWall)
             {
-                if (IsRunning)
+                if (touchingDirections.IsGrounded)
                 {
-                    return runSpeed;
+                    if (IsRunning)
+                    {
+                        return runSpeed;
+                    }
+                    else
+                    {
+                        return walkSpeed;
+                    }
                 }
                 else
                 {
-                    return walkSpeed;
+                    return airWalkSpeed;
                 }
             }
             else
