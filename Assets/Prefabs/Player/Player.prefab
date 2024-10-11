@@ -132,6 +132,7 @@ MonoBehaviour:
   walkSpeed: 5
   runSpeed: 8
   jumpImpulse: 6
+  airWalkSpeed: 3
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
@@ -181,7 +182,19 @@ MonoBehaviour:
     m_ActionId: 24516222-2320-4843-9bc7-aa44212b18b2
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3770414397627792584}
+        m_TargetAssemblyTypeName: AdventurerController, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ed07e6b0-3a4d-46d7-b25e-e6064d323f70
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -344,4 +357,8 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   groundDistance: 0.05
+  wallDistance: 0.2
+  ceilingDistance: 0.05
   _isGrounded: 1
+  _isOnWall: 0
+  _isOnCeiling: 0
