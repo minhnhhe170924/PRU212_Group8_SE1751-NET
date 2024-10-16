@@ -13,9 +13,9 @@ public class BigManController : MonoBehaviour
 
     Vector2 walkDirectionVector = Vector2.right;
 
-    public enum WalkableDirection { Left, Right };
+    public enum WalkableDirection { Right, Left };
 
-    private WalkableDirection _walkableDirection;
+    private WalkableDirection _walkableDirection = WalkableDirection.Right;
 
     public WalkableDirection WalkDirection
     {
@@ -50,7 +50,7 @@ public class BigManController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
         {
             FlipDirection();
         }
@@ -60,12 +60,15 @@ public class BigManController : MonoBehaviour
 
     private void FlipDirection()
     {
-        if(WalkDirection == WalkableDirection.Left)
+        if (WalkDirection == WalkableDirection.Left)
         {
             WalkDirection = WalkableDirection.Right;
         }
-        else if(WalkDirection == WalkableDirection.Right) 
-        { WalkDirection = WalkableDirection.Left;} else
+        else if (WalkDirection == WalkableDirection.Right)
+        {
+            WalkDirection = WalkableDirection.Left;
+        }
+        else
         {
             Debug.LogError("Current walkable direction is not set to legal value.");
         }
