@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5681797237070042564}
   - component: {fileID: 5489601019516906029}
   - component: {fileID: 3835048667744009310}
-  - component: {fileID: 2468540923329844713}
   m_Layer: 0
   m_Name: BigMan
   m_TagString: Untagged
@@ -149,16 +148,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.17937207, y: 0.005025387}
   m_Size: {x: 0.8884282, y: 2.0613818}
   m_Direction: 0
---- !u!114 &2468540923329844713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7516347441503049017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c38c9969233ce46ac86edb98ca4e3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 3
