@@ -41,10 +41,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Background
     uniqueID: 1117427357
     locked: 0
-  - name: New Layer 2
+  - name: Player
     uniqueID: 985279677
     locked: 0
   - name: New Layer 3
