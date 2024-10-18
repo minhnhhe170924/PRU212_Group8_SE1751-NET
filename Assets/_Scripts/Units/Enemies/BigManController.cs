@@ -8,8 +8,11 @@ public class BigManController : MonoBehaviour
 {
     public float walkSpeed = 3f;
 
+    public DetectionZone attackZone;
+
     Rigidbody2D rb;
     TouchingDirections touchingDirections;
+    Animator animator;
 
     Vector2 walkDirectionVector = Vector2.right;
 
@@ -46,6 +49,33 @@ public class BigManController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
+        animator = GetComponent<Animator>();
+    }
+
+    private bool _hasTarget = false;
+
+    public bool HasTarget
+    {
+        get { return _hasTarget; }
+        private set
+        {
+            _hasTarget = value;
+            animator.SetBool(AnimationStrings.hasTarget, value);
+
+        }
+    }
+
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
+    private void Update()
+    {
+        HasTarget = attackZone.detectedColliders.Count > 0;
     }
 
     private void FixedUpdate()
@@ -55,7 +85,14 @@ public class BigManController : MonoBehaviour
             FlipDirection();
         }
 
-        rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        if (CanMove)
+        {
+            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 
     private void FlipDirection()
