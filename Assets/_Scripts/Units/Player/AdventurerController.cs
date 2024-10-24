@@ -184,7 +184,7 @@ public class AdventurerController : PlayerUnitBase
     {
         if (context.started)
         {
-            // animator.SetTrigger(AnimationStrings.attackTrigger);
+            animator.SetTrigger(AnimationStrings.switchGravityTrigger);
             rb.gravityScale *= -1;
             this.transform.localScale *= new Vector2(1, -1);
         }
