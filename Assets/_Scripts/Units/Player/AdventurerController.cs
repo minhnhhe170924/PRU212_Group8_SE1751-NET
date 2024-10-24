@@ -179,4 +179,13 @@ public class AdventurerController : PlayerUnitBase
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
+
+    public void SwitchGravity(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            // animator.SetTrigger(AnimationStrings.attackTrigger);
+            rb.gravityScale *= -1;
+        }
+    }
 }

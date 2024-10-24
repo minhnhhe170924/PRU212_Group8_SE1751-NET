@@ -269,6 +269,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3c2cbda6-b0f5-4a1c-b543-67122e49eb79
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3770414397627792584}
+        m_TargetAssemblyTypeName: AdventurerController, Assembly-CSharp
+        m_MethodName: SwitchGravity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6eba51d9-0235-4104-9390-cc0eb761f539
+    m_ActionName: Player/Switch gravity[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
