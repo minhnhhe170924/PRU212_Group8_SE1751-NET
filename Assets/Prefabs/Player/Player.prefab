@@ -274,7 +274,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3770414397627792584}
         m_TargetAssemblyTypeName: AdventurerController, Assembly-CSharp
-        m_MethodName: SwitchGravity
+        m_MethodName: OnSwitchGravity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
