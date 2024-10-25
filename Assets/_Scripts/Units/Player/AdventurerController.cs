@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,7 @@ public class AdventurerController : PlayerUnitBase
     public float runSpeed = 8.0f;
     public float jumpImpulse = 10.0f;
     public float airWalkSpeed = 3.0f;
+    public float switchGravityTimeLimit = 10f;
     Vector2 moveInput;
     TouchingDirections touchingDirections;
 
@@ -15,7 +17,7 @@ public class AdventurerController : PlayerUnitBase
     {
         get
         {
-            if(!CanMove)
+            if (!CanMove)
             {
                 return 0;
             }
@@ -186,6 +188,18 @@ public class AdventurerController : PlayerUnitBase
         {
             animator.SetTrigger(AnimationStrings.switchGravityTrigger);
             rb.gravityScale *= -1;
+
+
+            // Start cooldown of switch gravity skill
+            StartCoroutine(SwitchGravityCooldownCoroutine());
         }
+    }
+
+    IEnumerator SwitchGravityCooldownCoroutine()
+    {
+        yield return new WaitForSeconds(switchGravityTimeLimit);
+
+        animator.SetTrigger(AnimationStrings.switchGravityTrigger);
+        rb.gravityScale *= -1;
     }
 }

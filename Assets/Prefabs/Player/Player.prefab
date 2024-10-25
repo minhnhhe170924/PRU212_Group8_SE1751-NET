@@ -133,6 +133,7 @@ MonoBehaviour:
   runSpeed: 8
   jumpImpulse: 6
   airWalkSpeed: 3
+  switchGravityTimeLimit: 10
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
