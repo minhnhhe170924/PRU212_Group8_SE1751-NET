@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int damage = 15;
+    public Vector2 moveSpeed = new Vector2(7f, 0);
+
+    Rigidbody2D rb;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        rb.velocity = new Vector2(moveSpeed.x * transform.localScale.x, moveSpeed.y);
     }
 }
