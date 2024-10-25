@@ -195,6 +195,14 @@ public class AdventurerController : PlayerUnitBase
         }
     }
 
+    public void OnRangedAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+        }
+    }
+
     public void OnSwitchGravity(InputAction.CallbackContext context)
     {
         if (context.started && !isSwitchGravityActive && CanMove && touchingDirections.IsGrounded)
