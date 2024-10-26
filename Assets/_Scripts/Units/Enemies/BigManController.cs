@@ -9,6 +9,7 @@ public class BigManController : MonoBehaviour
     public float walkSpeed = 3f;
 
     public DetectionZone attackZone;
+    public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
     TouchingDirections touchingDirections;
@@ -80,7 +81,7 @@ public class BigManController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall || cliffDetectionZone.detectedColliders.Count == 0)
         {
             FlipDirection();
         }
