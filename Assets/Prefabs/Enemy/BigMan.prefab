@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 9137446074598199496}
   - component: {fileID: 1913774405913276075}
   - component: {fileID: 3337491539717490998}
+  - component: {fileID: 5836763071896258441}
   m_Layer: 8
   m_Name: BigMan
   m_TagString: Untagged
@@ -310,3 +311,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 3
   attackZone: {fileID: 6321127154870758439}
+--- !u!114 &5836763071896258441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516347441503049017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d952182bb828747822d2748cda2b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
