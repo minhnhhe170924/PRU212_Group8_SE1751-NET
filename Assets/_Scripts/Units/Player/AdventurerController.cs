@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class AdventurerController : PlayerUnitBase
 {
     public float walkSpeed = 5.0f;
@@ -10,6 +10,7 @@ public class AdventurerController : PlayerUnitBase
     public float airWalkSpeed = 3.0f;
     Vector2 moveInput;
     TouchingDirections touchingDirections;
+    Damageable damageable;
 
     public float CurrentMoveSpeed
     {
@@ -106,6 +107,9 @@ public class AdventurerController : PlayerUnitBase
         }
     }
 
+
+
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -118,11 +122,13 @@ public class AdventurerController : PlayerUnitBase
         private set { }
     }
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
+        damageable = GetComponent<Damageable>();
     }
 
     private void Update()
@@ -132,7 +138,9 @@ public class AdventurerController : PlayerUnitBase
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+        if (!damageable.LockVelocity)
+            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
 
@@ -194,5 +202,10 @@ public class AdventurerController : PlayerUnitBase
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
+    }
+
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 }
