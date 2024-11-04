@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class BigManController : MonoBehaviour
 {
-    public float walkSpeed = 3f;
-
+    public float walkAcceleration = 3f;
+    public float maxSpeed = 3f;
     public DetectionZone attackZone;
 
     Rigidbody2D rb;
@@ -90,7 +90,10 @@ public class BigManController : MonoBehaviour
         {
             if (CanMove)
             {
-                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+                //Accelerate to max speed
+                rb.velocity = new Vector2(Mathf.Clamp(
+                    rb.velocity.x + (walkAcceleration * walkDirectionVector.x * Time.fixedDeltaTime), -maxSpeed, maxSpeed),
+                    rb.velocity.y);
             }
             else
             {
