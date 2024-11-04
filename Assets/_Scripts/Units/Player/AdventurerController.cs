@@ -7,12 +7,22 @@ public class AdventurerController : PlayerUnitBase
 {
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
-    public float jumpImpulse = 10.0f;
+    public float jumpImpulse = 9f;
     public float airWalkSpeed = 3.0f;
 
     public float switchGravityTimeLimit = 10.0f;
     private float currentSwitchGravityCooldown = 0.0f;
     private bool isSwitchGravityActive = false;
+
+    private bool canDash = true;
+    private bool isDashing = false;
+
+    [SerializeField] private float dashPower = 30f;
+    [SerializeField] private float dashingTime = 0.1f;
+    private float dashingCooldown = 1f;
+
+    [SerializeField]
+    private TrailRenderer dashingTrail;
 
     Vector2 moveInput;
     TouchingDirections touchingDirections;
@@ -121,10 +131,16 @@ public class AdventurerController : PlayerUnitBase
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
+        dashingTrail = GetComponent<TrailRenderer>();
     }
 
     private void FixedUpdate()
     {
+        if(isDashing)
+        {
+            return;
+        }
+
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
 
@@ -219,5 +235,35 @@ public class AdventurerController : PlayerUnitBase
     {
         animator.SetTrigger(AnimationStrings.switchGravityTrigger);
         rb.gravityScale *= -1;
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.started && CanMove && canDash)
+        {
+            animator.SetTrigger(AnimationStrings.dashTrigger);
+            StartCoroutine(Dash());
+        }
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        
+        float oriGravityScale = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        dashingTrail.emitting = true;
+
+        yield return new WaitForSeconds(dashingTime);
+
+        dashingTrail.emitting = false;
+        rb.gravityScale = oriGravityScale;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashingCooldown);
+
+        canDash = true;
     }
 }
