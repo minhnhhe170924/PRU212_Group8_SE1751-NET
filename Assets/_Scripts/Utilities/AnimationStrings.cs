@@ -19,4 +19,8 @@ internal class AnimationStrings
     internal static string gravitySwitched = "gravitySwitched";
     internal static string switchGravityTrigger = "switchGravity";
     internal static string rangedAttackTrigger = "rangedAttack";
+    internal static string isAlive = "isAlive";
+    internal static string isHit = "isHit";
+    internal static string hitTrigger = "hit";
+    internal static string lockVelocity = "lockVelocity";
 }
