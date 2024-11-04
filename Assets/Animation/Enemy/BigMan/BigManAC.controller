@@ -268,6 +268,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 0}
+  - m_Name: gravitySwitched
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -328,12 +334,12 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -4378867945130088839}
-    second:
-    - {fileID: -8666452183551028319}
   - first: {fileID: -2205088512705400335}
     second:
     - {fileID: -7192079806927214826}
+  - first: {fileID: -4378867945130088839}
+    second:
+    - {fileID: -8666452183551028319}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 40, y: 200, z: 0}

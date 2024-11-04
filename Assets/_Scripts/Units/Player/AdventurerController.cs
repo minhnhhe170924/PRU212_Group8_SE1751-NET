@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,11 @@ public class AdventurerController : PlayerUnitBase
     public float runSpeed = 8.0f;
     public float jumpImpulse = 10.0f;
     public float airWalkSpeed = 3.0f;
+
+    public float switchGravityTimeLimit = 10.0f;
+    private float currentSwitchGravityCooldown = 0.0f;
+    private bool isSwitchGravityActive = false;
+
     Vector2 moveInput;
     TouchingDirections touchingDirections;
 
@@ -15,7 +21,7 @@ public class AdventurerController : PlayerUnitBase
     {
         get
         {
-            if(!CanMove)
+            if (!CanMove)
             {
                 return 0;
             }
@@ -117,15 +123,24 @@ public class AdventurerController : PlayerUnitBase
         touchingDirections = GetComponent<TouchingDirections>();
     }
 
-    private void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
+
+        // Check for cooldown of switch gravity skill
+        if (isSwitchGravityActive)
+        {
+            if (currentSwitchGravityCooldown > 0.0f)
+            {
+                currentSwitchGravityCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                SwitchGravity();
+                isSwitchGravityActive = false;
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -178,5 +193,23 @@ public class AdventurerController : PlayerUnitBase
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
+    }
+
+    public void OnSwitchGravity(InputAction.CallbackContext context)
+    {
+        if (context.started && !isSwitchGravityActive && CanMove && touchingDirections.IsGrounded)
+        {
+            SwitchGravity();
+            isSwitchGravityActive = true;
+
+            // Start cooldown of switch gravity skill
+            currentSwitchGravityCooldown = switchGravityTimeLimit;
+        }
+    }
+
+    private void SwitchGravity()
+    {
+        animator.SetTrigger(AnimationStrings.switchGravityTrigger);
+        rb.gravityScale *= -1;
     }
 }

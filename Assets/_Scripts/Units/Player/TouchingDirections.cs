@@ -64,7 +64,34 @@ public class TouchingDirections : MonoBehaviour
         }
     }
 
+    public bool GravitySwitched
+    {
+        get
+        {
+            bool gravitySwitched = gameObject.GetComponent<Rigidbody2D>().gravityScale < 0;
+
+            animator.SetBool(AnimationStrings.gravitySwitched, gravitySwitched);
+            return gravitySwitched;
+        }
+    }
+
     private Vector2 wallCheckDirection => gameObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+    private Vector2 groundCheckDirection
+    {
+        get
+        {
+            if(GravitySwitched)
+            {
+                return Vector2.up;
+            }
+            else
+            {
+                return Vector2.down;
+            }
+        }
+    }
+
+    private Vector2 ceilingCheckDirection => groundCheckDirection == Vector2.down ? Vector2.up : Vector2.down;
 
     private void Awake()
     {
@@ -74,8 +101,8 @@ public class TouchingDirections : MonoBehaviour
 
     private void FixedUpdate()
     {
-        IsGrounded = touchingCol.Cast(Vector2.down, castFilter, groundHits, groundDistance) > 0;
+        IsGrounded = touchingCol.Cast(groundCheckDirection, castFilter, groundHits, groundDistance) > 0;
         IsOnWall = touchingCol.Cast(wallCheckDirection, castFilter, wallHits, wallDistance) > 0;
-        IsOnCeiling = touchingCol.Cast(Vector2.up, castFilter, ceilingHits, ceilingDistance) > 0;
+        IsOnCeiling = touchingCol.Cast(ceilingCheckDirection, castFilter, ceilingHits, ceilingDistance) > 0;
     }
 }
