@@ -241,6 +241,7 @@ public class AdventurerController : PlayerUnitBase
     {
         if (context.started && CanMove && canDash)
         {
+            animator.SetTrigger(AnimationStrings.dashTrigger);
             StartCoroutine(Dash());
         }
     }
