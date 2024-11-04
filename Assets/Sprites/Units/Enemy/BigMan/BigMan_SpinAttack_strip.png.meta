@@ -1,0 +1,787 @@
+fileFormatVersion: 2
+guid: 6943dbaf9e1ba174d9f47fde3e1b9e57
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6287b62078ad74bb5ab0280590a2a7
+      internalID: -429231690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99921d2535c4544b86af8c2e0b8c8dc
+      internalID: -1607954718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc8afa644ef9ce4d8a1851a4546b72f
+      internalID: 1174500454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e8156e6e3e9e74b82b05772e1b0c8e
+      internalID: -1232890150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d599ee5e2d26f8d4096f8cc42e0b87bf
+      internalID: 160524433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e415b540556e4634aa639d72f172fb1a
+      internalID: -1061032682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f788655edcbec45b5aa1d0fdcab977
+      internalID: -1713535787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_7
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b70b0179202ef49a7ecb4f9b2ed2be
+      internalID: 1566531451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ccc46053b930547b55bbf8d70b1841
+      internalID: 794865165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a87a7c55472d554ead26eadb72c8ce3
+      internalID: 81477853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49817ce10f5927f47bba99916d78a566
+      internalID: -1719961759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e151163afaf3148944198601fbd7c3
+      internalID: 901556398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_12
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a69df4ac4c21ae4489ace358b2798ea
+      internalID: -317940115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_13
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d6962edacde6846a9aa2a1f7761e4a
+      internalID: 451423611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_14
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42555600d069a1b479a9d6b2bb1f3330
+      internalID: 587433553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_15
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1067eefc35b012843b3f5944a3d1bd57
+      internalID: 864281547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_16
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37c4acdf24d92946a420d45ac495120
+      internalID: 1253216500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_17
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3535a3d680ef33459677353a06589e9
+      internalID: 330477306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_18
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6734f500e8a72504eb3ba9c0dd353300
+      internalID: 2089379691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_19
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdafbdce8f3b2248b55bb56dd251a77
+      internalID: -178232322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_20
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae893cf8334150d43b0e979854865fa3
+      internalID: 119271315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_21
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562781186c11a0a41b0385e9b576de0c
+      internalID: 1494025945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_22
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5def60cff3537c2449bb3d12c8774afa
+      internalID: 668984470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_23
+      rect:
+        serializedVersion: 2
+        x: 3910
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3de4a5d14fa61d4db40b61ba081bbd6
+      internalID: 895158101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_24
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75deb74d4e6b284b90cf654e648cdc8
+      internalID: -1667523469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_25
+      rect:
+        serializedVersion: 2
+        x: 4250
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59876d045496dcf458e6c82229eee125
+      internalID: 1529270239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_26
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fb7367e24d8f146b9a2cf5b3ac2302
+      internalID: 1907782008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_27
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c069d6ad84151545bfb769b2db1d1e9
+      internalID: 591206619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_28
+      rect:
+        serializedVersion: 2
+        x: 4760
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac492d8d7f32ff04cbbdf437f18b2bab
+      internalID: -599970506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_SpinAttack_strip_29
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb39d4d1a09881c48bca1a839f013f34
+      internalID: -1701526068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BigMan_SpinAttack_strip_0: -429231690
+      BigMan_SpinAttack_strip_1: -1607954718
+      BigMan_SpinAttack_strip_10: -1719961759
+      BigMan_SpinAttack_strip_11: 901556398
+      BigMan_SpinAttack_strip_12: -317940115
+      BigMan_SpinAttack_strip_13: 451423611
+      BigMan_SpinAttack_strip_14: 587433553
+      BigMan_SpinAttack_strip_15: 864281547
+      BigMan_SpinAttack_strip_16: 1253216500
+      BigMan_SpinAttack_strip_17: 330477306
+      BigMan_SpinAttack_strip_18: 2089379691
+      BigMan_SpinAttack_strip_19: -178232322
+      BigMan_SpinAttack_strip_2: 1174500454
+      BigMan_SpinAttack_strip_20: 119271315
+      BigMan_SpinAttack_strip_21: 1494025945
+      BigMan_SpinAttack_strip_22: 668984470
+      BigMan_SpinAttack_strip_23: 895158101
+      BigMan_SpinAttack_strip_24: -1667523469
+      BigMan_SpinAttack_strip_25: 1529270239
+      BigMan_SpinAttack_strip_26: 1907782008
+      BigMan_SpinAttack_strip_27: 591206619
+      BigMan_SpinAttack_strip_28: -599970506
+      BigMan_SpinAttack_strip_29: -1701526068
+      BigMan_SpinAttack_strip_3: -1232890150
+      BigMan_SpinAttack_strip_4: 160524433
+      BigMan_SpinAttack_strip_5: -1061032682
+      BigMan_SpinAttack_strip_6: -1713535787
+      BigMan_SpinAttack_strip_7: 1566531451
+      BigMan_SpinAttack_strip_8: 794865165
+      BigMan_SpinAttack_strip_9: 81477853
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
