@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
     }
     public void AboutUs()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("AboutUs");
     }
     public void Replay()
     {
@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
     public void ExitToMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
 
     }
     public void Exit()
