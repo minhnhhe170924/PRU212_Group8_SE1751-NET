@@ -7,7 +7,7 @@ public class AdventurerController : PlayerUnitBase
 {
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
-    public float jumpImpulse = 10.0f;
+    public float jumpImpulse = 9f;
     public float airWalkSpeed = 3.0f;
 
     public float switchGravityTimeLimit = 10.0f;
@@ -17,8 +17,8 @@ public class AdventurerController : PlayerUnitBase
     private bool canDash = true;
     private bool isDashing = false;
 
-    [SerializeField] private float dashPower = 15f;
-    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashPower = 30f;
+    [SerializeField] private float dashingTime = 0.1f;
     private float dashingCooldown = 1f;
 
     [SerializeField]

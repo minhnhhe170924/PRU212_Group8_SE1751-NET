@@ -322,9 +322,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   runSpeed: 8
-  jumpImpulse: 10
+  jumpImpulse: 9
   airWalkSpeed: 4
   switchGravityTimeLimit: 10
+  dashPower: 30
+  dashingTime: 0.1
   dashingTrail: {fileID: 0}
   _isMoving: 0
   _isRunning: 0

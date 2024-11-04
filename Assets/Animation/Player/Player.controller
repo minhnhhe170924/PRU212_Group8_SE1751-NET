@@ -136,7 +136,7 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7236036338704333149}
-    m_Position: {x: 270, y: 120, z: 0}
+    m_Position: {x: 290, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -475,6 +475,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-2125385755958111302
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: player_dash
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 8f530664f3b1c41489aaf34be73712a3, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1109 &-1989354322160796237
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -950,6 +976,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 423482328104344726}
     m_Position: {x: 650, y: 130, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2125385755958111302}
+    m_Position: {x: 685, y: 195, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -7306030515612874752}
@@ -966,9 +995,6 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 5088381521006384998}
-    second:
-    - {fileID: -7606391556376096804}
   - first: {fileID: -7306030515612874752}
     second:
     - {fileID: 7429048800235214682}
@@ -983,6 +1009,9 @@ AnimatorStateMachine:
   - first: {fileID: 5477903692837541449}
     second:
     - {fileID: 2640807396045991941}
+  - first: {fileID: 5088381521006384998}
+    second:
+    - {fileID: -7606391556376096804}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 140, z: 0}
