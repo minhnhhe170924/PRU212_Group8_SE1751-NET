@@ -135,8 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   runSpeed: 8
-  jumpImpulse: 6
-  airWalkSpeed: 3
+  jumpImpulse: 10
+  airWalkSpeed: 4
   switchGravityTimeLimit: 10
   _isMoving: 0
   _isRunning: 0
