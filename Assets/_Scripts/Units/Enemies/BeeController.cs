@@ -10,6 +10,8 @@ public class BeeController : MonoBehaviour
     Rigidbody2D rb;
     public DetectionZone attackZone;
     Animator animator;
+    Damageable damageable;
+    public Collider2D deathCollider;
 
     public List<Transform> waypoints;
     public float waypointReachedDistance = 0.1f;
@@ -41,11 +43,17 @@ public class BeeController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
 
     private void Start()
     {
         nextWaypoint = waypoints[waypointNum];
+    }
+
+    private void OnEnable()
+    {
+        damageable.damageableDeath.AddListener(OnDeath);
     }
 
     private void Update()
@@ -55,13 +63,16 @@ public class BeeController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CanMove)
+        if (damageable.IsAlive)
         {
-            Flight();
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
+            if (CanMove)
+            {
+                Flight();
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
     }
 
@@ -92,7 +103,7 @@ public class BeeController : MonoBehaviour
     {
         Vector3 localScale = transform.localScale;
 
-        if(localScale.x < 0 && rb.velocity.x < 0 )
+        if (localScale.x < 0 && rb.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1 * localScale.x, localScale.y, localScale.z);
         }
@@ -100,5 +111,13 @@ public class BeeController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1 * localScale.x, localScale.y, localScale.z);
         }
+    }
+
+    public void OnDeath()
+    {
+        rb.gravityScale = 2f;
+        transform.rotation = new Quaternion(0, 0, -45, 0);
+        rb.velocity = new Vector2(0, rb.velocity.y);
+        deathCollider.enabled = true;
     }
 }

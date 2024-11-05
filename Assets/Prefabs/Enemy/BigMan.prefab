@@ -520,7 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c38c9969233ce46ac86edb98ca4e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkAcceleration: 30
+  maxSpeed: 3
   attackZone: {fileID: 6321127154870758439}
   cliffDetectionZone: {fileID: 297604491316830719}
 --- !u!114 &8857155437798577270
@@ -536,6 +537,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageableHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3337491539717490998}
+        m_TargetAssemblyTypeName: BigManController, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageableDeath:
     m_PersistentCalls:
       m_Calls: []
   _maxHeath: 100

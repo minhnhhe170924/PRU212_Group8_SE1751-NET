@@ -564,6 +564,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3770414397627792584}
+        m_TargetAssemblyTypeName: AdventurerController, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageableDeath:
+    m_PersistentCalls:
       m_Calls: []
   _maxHeath: 100
   _health: 100
@@ -686,6 +701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105345904914753866}
   - component: {fileID: 5587524714858969742}
+  - component: {fileID: 2440826254917501432}
   m_Layer: 0
   m_Name: AirAttack2
   m_TagString: Untagged
@@ -773,6 +789,20 @@ PolygonCollider2D:
       - {x: 0.5004846, y: -0.19394374}
       - {x: 0.49987602, y: 0.39552087}
   m_UseDelaunayMesh: 0
+--- !u!114 &2440826254917501432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560691050906305978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  knockback: {x: 0, y: 0}
 --- !u!1 &6044009312801096292
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758042830318778005}
   - component: {fileID: 5393305910190753625}
+  - component: {fileID: 387135013052751313}
   m_Layer: 0
   m_Name: AirAttack1
   m_TagString: Untagged
@@ -867,6 +898,20 @@ PolygonCollider2D:
       - {x: 0.38507938, y: -0.16612327}
       - {x: 0.4186263, y: 0.27923083}
   m_UseDelaunayMesh: 0
+--- !u!114 &387135013052751313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6044009312801096292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
 --- !u!1 &7194197558139754110
 GameObject:
   m_ObjectHideFlags: 0
