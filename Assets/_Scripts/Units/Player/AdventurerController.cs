@@ -226,7 +226,15 @@ public class AdventurerController : PlayerUnitBase
         if (context.started && CanMove && touchingDirections.IsGrounded)
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+
+            if(isSwitchGravityActive)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -jumpImpulse);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            }
         }
     }
 
