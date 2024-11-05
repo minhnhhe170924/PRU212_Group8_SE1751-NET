@@ -1601,6 +1601,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6531491443255946645, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531491443255946645, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BeeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531491443255946645, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6815005844573701941, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: waypoints.Array.size
       value: 4

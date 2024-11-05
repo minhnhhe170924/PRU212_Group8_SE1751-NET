@@ -53,7 +53,7 @@ public class BeeController : MonoBehaviour
 
     private void OnEnable()
     {
-        damageable.damagableDeath += OnDeath();
+        damageable.damagableDeath.AddListener(OnDeath);
     }
 
     private void Update()
