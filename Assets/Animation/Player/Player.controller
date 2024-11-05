@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b58fe4b4bdf2c84cb5d6b852bd2d0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolName: CanMove
+  boolName: canMove
   updateOnState: 1
   updateOnStateMachine: 0
   onEnterValue: 0
