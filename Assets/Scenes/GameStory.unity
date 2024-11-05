@@ -498,16 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "You\u2019ve heard the tale, haven\u2019t you? About the Black Mountain,
     once the source of life, now shrouded in darkness and haunted by the whispers
     of lost souls\u2026"
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -707,16 +701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "To find the answers, you must seek out the Keeper of Secrets at the Ancient
     Shrine. But remember this\u2026 no one has ever returned from there without losing
     something."
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -946,16 +934,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "(with a serious look) No, they are not mere legends. That mountain took
     away those I loved dearly. But I can feel it\u2026 the darkest day is still yet
     to come\u2026"
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -1410,15 +1392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "(eyes filled with determination) If that\u2019s true\u2026 What must I
     do to protect the village? I can\u2019t just stand by and watch."
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -2425,14 +2401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: The wind picks up, sweeping dry leaves through the stillness of the air.
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -2586,15 +2556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "(taking a deep breath) If it means saving everyone, I\u2019m willing to
     face whatever comes!"
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
@@ -5163,15 +5127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1a50c2e20e59b4f8162ed276de1785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <finished>k__BackingField: 0
-  textHolder: {fileID: 0}
   input: "(slightly surprised) I\u2019ve heard\u2026 but I always thought they were
     just stories to scare children. Did those things really happen?"
-  textColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
+  textColor: {r: 0, g: 0, b: 0, a: 0}
   delay: 0.01
   characterSprite: {fileID: 0}
   imageHolder: {fileID: 0}
