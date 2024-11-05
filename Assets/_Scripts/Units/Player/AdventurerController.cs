@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class AdventurerController : PlayerUnitBase
 {
     public float walkSpeed = 5.0f;
@@ -26,6 +26,7 @@ public class AdventurerController : PlayerUnitBase
 
     Vector2 moveInput;
     TouchingDirections touchingDirections;
+    Damageable damageable;
 
     public float CurrentMoveSpeed
     {
@@ -114,6 +115,17 @@ public class AdventurerController : PlayerUnitBase
         }
     }
 
+    public bool IsAlive
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isAlive);
+        }
+    }
+
+
+
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -126,11 +138,13 @@ public class AdventurerController : PlayerUnitBase
         private set { }
     }
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
+        damageable = GetComponent<Damageable>();
         dashingTrail = GetComponent<TrailRenderer>();
     }
 
@@ -141,31 +155,44 @@ public class AdventurerController : PlayerUnitBase
             return;
         }
 
-        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
-        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
-
-        // Check for cooldown of switch gravity skill
-        if (isSwitchGravityActive)
+        if (!damageable.LockVelocity)
         {
-            if (currentSwitchGravityCooldown > 0.0f)
+            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+
+            // Check for cooldown of switch gravity skill
+            if (isSwitchGravityActive)
             {
-                currentSwitchGravityCooldown -= Time.deltaTime;
-            }
-            else
-            {
-                SwitchGravity();
-                isSwitchGravityActive = false;
+                if (currentSwitchGravityCooldown > 0.0f)
+                {
+                    currentSwitchGravityCooldown -= Time.deltaTime;
+                }
+                else
+                {
+                    SwitchGravity();
+                    isSwitchGravityActive = false;
+                }
             }
         }
+
+        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+        animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
 
-        IsMoving = moveInput != Vector2.zero;
+        if (IsAlive)
+        {
+            IsMoving = moveInput != Vector2.zero;
 
-        SetFacingDirection(moveInput);
+            SetFacingDirection(moveInput);
+        }
+        else
+        {
+            IsMoving = false;
+        }
+
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -199,7 +226,15 @@ public class AdventurerController : PlayerUnitBase
         if (context.started && CanMove && touchingDirections.IsGrounded)
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+
+            if(isSwitchGravityActive)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -jumpImpulse);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            }
         }
     }
 
@@ -209,6 +244,11 @@ public class AdventurerController : PlayerUnitBase
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
+    }
+
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
     public void OnRangedAttack(InputAction.CallbackContext context)
