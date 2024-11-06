@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public int damage = 15;
     public Vector2 moveSpeed = new Vector2(7f, 0);
+    public Vector2 knockback = Vector2.zero;
 
     Rigidbody2D rb;
 
@@ -17,5 +18,24 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb.velocity = new Vector2(moveSpeed.x * transform.localScale.x, moveSpeed.y);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Damageable damageable = collision.GetComponent<Damageable>();
+
+        if (damageable != null)
+        {
+            Vector2 deliveredKnockback = transform.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
+
+            // if it can be hitTrigger, hitTrigger it
+            bool gotHit = damageable.Hit(damage, deliveredKnockback);
+            if (gotHit)
+            {
+                Debug.Log("Hit: " + collision.name + " for " + damage);
+
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -1543,6 +1543,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5490953542094206610, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490953542094206610, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6815005844573701941, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
@@ -1559,25 +1567,29 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[3]
       value: 
       objectReference: {fileID: 1374130136}
+    - target: {fileID: 7237638843371018402, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8290520013465515421, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_Name
       value: Bee
       objectReference: {fileID: 0}
     - target: {fileID: 8381473452502839764, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_Size.x
-      value: 0.80569077
+      value: 1.0989537
       objectReference: {fileID: 0}
     - target: {fileID: 8381473452502839764, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_Size.y
-      value: 0.80569077
+      value: 1.0989537
       objectReference: {fileID: 0}
     - target: {fileID: 8381473452502839764, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_Offset.x
-      value: 0.6060767
+      value: 0.5278733
       objectReference: {fileID: 0}
     - target: {fileID: 8381473452502839764, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_Offset.y
-      value: 0.0593791
+      value: 0.05449152
       objectReference: {fileID: 0}
     - target: {fileID: 8381473452502839764, guid: 1d649324e58cc184eb598bf8f9d1d3ae, type: 3}
       propertyPath: m_IsTrigger

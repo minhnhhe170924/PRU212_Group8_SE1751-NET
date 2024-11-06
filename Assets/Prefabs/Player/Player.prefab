@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4724357881642168976}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 15
   knockback: {x: 2, y: 3}
 --- !u!1 &4560691050906305978
 GameObject:
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
+  attackDamage: 30
   knockback: {x: 0, y: 0}
 --- !u!1 &6044009312801096292
 GameObject:
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 20
   knockback: {x: 0, y: 0}
 --- !u!1 &7194197558139754110
 GameObject:
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
+  attackDamage: 25
   knockback: {x: 2, y: 1}
 --- !u!1 &8984699169721127324
 GameObject:
@@ -1155,5 +1155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 50
   knockback: {x: 4, y: 0}

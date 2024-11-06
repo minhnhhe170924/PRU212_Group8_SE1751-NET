@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   moveSpeed: {x: 7, y: 0}
+  knockback: {x: 2, y: 0}
 --- !u!50 &-39654794236224759
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +158,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2981968, y: 0}
