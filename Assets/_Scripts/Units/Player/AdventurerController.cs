@@ -1,21 +1,38 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class AdventurerController : PlayerUnitBase
 {
     public float walkSpeed = 5.0f;
     public float runSpeed = 8.0f;
-    public float jumpImpulse = 10.0f;
+    public float jumpImpulse = 9f;
     public float airWalkSpeed = 3.0f;
+
+    public float switchGravityTimeLimit = 10.0f;
+    private float currentSwitchGravityCooldown = 0.0f;
+    private bool isSwitchGravityActive = false;
+
+    private bool canDash = true;
+    private bool isDashing = false;
+
+    [SerializeField] private float dashPower = 30f;
+    [SerializeField] private float dashingTime = 0.1f;
+    private float dashingCooldown = 1f;
+
+    [SerializeField]
+    private TrailRenderer dashingTrail;
+
     Vector2 moveInput;
     TouchingDirections touchingDirections;
+    Damageable damageable;
 
     public float CurrentMoveSpeed
     {
         get
         {
-            if(!CanMove)
+            if (!CanMove)
             {
                 return 0;
             }
@@ -98,6 +115,17 @@ public class AdventurerController : PlayerUnitBase
         }
     }
 
+    public bool IsAlive
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isAlive);
+        }
+    }
+
+
+
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -110,20 +138,42 @@ public class AdventurerController : PlayerUnitBase
         private set { }
     }
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
-    }
-
-    private void Update()
-    {
-
+        damageable = GetComponent<Damageable>();
+        dashingTrail = GetComponent<TrailRenderer>();
     }
 
     private void FixedUpdate()
     {
+        if(isDashing)
+        {
+            return;
+        }
+
+        if (!damageable.LockVelocity)
+        {
+            rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
+
+            // Check for cooldown of switch gravity skill
+            if (isSwitchGravityActive)
+            {
+                if (currentSwitchGravityCooldown > 0.0f)
+                {
+                    currentSwitchGravityCooldown -= Time.deltaTime;
+                }
+                else
+                {
+                    SwitchGravity();
+                    isSwitchGravityActive = false;
+                }
+            }
+        }
+
         rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.velocity.y);
         animator.SetFloat(AnimationStrings.yVelocity, rb.velocity.y);
     }
@@ -132,9 +182,17 @@ public class AdventurerController : PlayerUnitBase
     {
         moveInput = context.ReadValue<Vector2>();
 
-        IsMoving = moveInput != Vector2.zero;
+        if (IsAlive)
+        {
+            IsMoving = moveInput != Vector2.zero;
 
-        SetFacingDirection(moveInput);
+            SetFacingDirection(moveInput);
+        }
+        else
+        {
+            IsMoving = false;
+        }
+
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -168,7 +226,15 @@ public class AdventurerController : PlayerUnitBase
         if (context.started && CanMove && touchingDirections.IsGrounded)
         {
             animator.SetTrigger(AnimationStrings.jumpTrigger);
-            rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+
+            if(isSwitchGravityActive)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -jumpImpulse);
+            }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
+            }
         }
     }
 
@@ -178,5 +244,66 @@ public class AdventurerController : PlayerUnitBase
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
+    }
+
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+
+    public void OnRangedAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+        }
+    }
+
+    public void OnSwitchGravity(InputAction.CallbackContext context)
+    {
+        if (context.started && !isSwitchGravityActive && CanMove && touchingDirections.IsGrounded)
+        {
+            SwitchGravity();
+            isSwitchGravityActive = true;
+
+            // Start cooldown of switch gravity skill
+            currentSwitchGravityCooldown = switchGravityTimeLimit;
+        }
+    }
+
+    private void SwitchGravity()
+    {
+        animator.SetTrigger(AnimationStrings.switchGravityTrigger);
+        rb.gravityScale *= -1;
+    }
+
+    public void OnDash(InputAction.CallbackContext context)
+    {
+        if (context.started && CanMove && canDash)
+        {
+            animator.SetTrigger(AnimationStrings.dashTrigger);
+            StartCoroutine(Dash());
+        }
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        
+        float oriGravityScale = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashPower, 0f);
+        dashingTrail.emitting = true;
+
+        yield return new WaitForSeconds(dashingTime);
+
+        dashingTrail.emitting = false;
+        rb.gravityScale = oriGravityScale;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashingCooldown);
+
+        canDash = true;
     }
 }

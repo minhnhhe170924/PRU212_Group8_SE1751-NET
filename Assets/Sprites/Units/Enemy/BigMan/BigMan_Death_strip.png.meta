@@ -1,0 +1,1007 @@
+fileFormatVersion: 2
+guid: 6691b0d96f9950a47a221ed02533c163
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigMan_Death_strip_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60775fde2690a34fb836cb6a3fae49a
+      internalID: 1587012651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6045350c702c8634fb44b5f96ae05bc3
+      internalID: 838568100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce954520e5ee8f240b0500da6a051142
+      internalID: 2024075684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d333ec306c4821e4994bd9223ce97148
+      internalID: -1581689983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538b29a2a8136324dbf4146bf646b5d1
+      internalID: 528420149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9412aadf64559446915155960454f16
+      internalID: -177107487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a4da0827ed5844184a71770bdf2442
+      internalID: 186170001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_7
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcc0bbad6620584a9b74178fcd550db
+      internalID: 1517622257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c37f10f18ef005448f3843e9872fbf1
+      internalID: 444252969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c55042f1de51e40b1295b3c8f5e7ab
+      internalID: -1378026554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a04fb3da048536439f330e1086cbf47
+      internalID: 366778802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9689bb4907f85f4285a3693129a7865
+      internalID: 1583508139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_12
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520c8548fb6f07948a33ab5afba51b50
+      internalID: -2105957463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_13
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a6dd9b870ed1a40b95d2169e7f2a03
+      internalID: -1798563238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_14
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3b0fbf55043e6478cf9ad0aaa68573
+      internalID: -612841852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_15
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edf3bd13afdaab44be89fa7d872c218
+      internalID: -763933072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_16
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb660963ec3c4f46b1e5f50e42438ae
+      internalID: 1929525324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_17
+      rect:
+        serializedVersion: 2
+        x: 2890
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360cd86983a0bfd4bb34a41bfd34c4cc
+      internalID: 706084151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_18
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7b9c531d0d15c4c863accec979ce38
+      internalID: 1889821838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_19
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a3d81446d5b1a44b09ba6490da4c99
+      internalID: 1391726095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_20
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054dfe9c0f0ea764c9fb4e51877bf07f
+      internalID: -494416460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_21
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd7581e3cc9de94b86ae6d179a0a7a9
+      internalID: -1854507894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_22
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2088cc77035518741ae4acfbbf368b84
+      internalID: -1403681828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_23
+      rect:
+        serializedVersion: 2
+        x: 3910
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6344f9eda563fb4fb30e6f5bea4595b
+      internalID: -327290422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_24
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc6172fea1a4c24585657aa23ea9cda
+      internalID: 1150560402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_25
+      rect:
+        serializedVersion: 2
+        x: 4250
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96218247d87898041b62383c20b87e3e
+      internalID: 830422967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_26
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17476e75f1257df4caf9cea9e9a72262
+      internalID: -1363357056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_27
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50602878705575642970f20dcfdfab9a
+      internalID: 1856595984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_28
+      rect:
+        serializedVersion: 2
+        x: 4760
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81746c50ca979a049ac352f2cc82109d
+      internalID: 1920690949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_29
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be85b7a1df53ec647a04b3ddfd9e0bcb
+      internalID: 286169398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_30
+      rect:
+        serializedVersion: 2
+        x: 5100
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68789e94d4fa41149bf061b9fc00aff2
+      internalID: 97492169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_31
+      rect:
+        serializedVersion: 2
+        x: 5270
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172c46a3c3e0104449e9da1c841b4c18
+      internalID: 1585295757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_32
+      rect:
+        serializedVersion: 2
+        x: 5440
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c990f5a23aaa0f46b3a52c75f96ea93
+      internalID: -904419506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_33
+      rect:
+        serializedVersion: 2
+        x: 5610
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5612c691cbdd0264e8c816bbefc635b0
+      internalID: 1259874421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_34
+      rect:
+        serializedVersion: 2
+        x: 5780
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60cf2007f57c7748af71cdb00b307b7
+      internalID: -584171018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_35
+      rect:
+        serializedVersion: 2
+        x: 5950
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88404818b03755344b679285ce71dbb6
+      internalID: 681052027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_36
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b027f0e7317aaa04a9b291799d8c791c
+      internalID: -1205083737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_37
+      rect:
+        serializedVersion: 2
+        x: 6290
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597230ddd62f03048af7cd33c44559dc
+      internalID: 1515245784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_38
+      rect:
+        serializedVersion: 2
+        x: 6460
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57be424cbf364849ad753d4e5027a88
+      internalID: 997160193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigMan_Death_strip_39
+      rect:
+        serializedVersion: 2
+        x: 6630
+        y: 0
+        width: 170
+        height: 96
+      alignment: 9
+      pivot: {x: 0.48, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd590c1d5c29464484fa7e286c014b7
+      internalID: 453363575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BigMan_Death_strip_0: 1587012651
+      BigMan_Death_strip_1: 838568100
+      BigMan_Death_strip_10: 366778802
+      BigMan_Death_strip_11: 1583508139
+      BigMan_Death_strip_12: -2105957463
+      BigMan_Death_strip_13: -1798563238
+      BigMan_Death_strip_14: -612841852
+      BigMan_Death_strip_15: -763933072
+      BigMan_Death_strip_16: 1929525324
+      BigMan_Death_strip_17: 706084151
+      BigMan_Death_strip_18: 1889821838
+      BigMan_Death_strip_19: 1391726095
+      BigMan_Death_strip_2: 2024075684
+      BigMan_Death_strip_20: -494416460
+      BigMan_Death_strip_21: -1854507894
+      BigMan_Death_strip_22: -1403681828
+      BigMan_Death_strip_23: -327290422
+      BigMan_Death_strip_24: 1150560402
+      BigMan_Death_strip_25: 830422967
+      BigMan_Death_strip_26: -1363357056
+      BigMan_Death_strip_27: 1856595984
+      BigMan_Death_strip_28: 1920690949
+      BigMan_Death_strip_29: 286169398
+      BigMan_Death_strip_3: -1581689983
+      BigMan_Death_strip_30: 97492169
+      BigMan_Death_strip_31: 1585295757
+      BigMan_Death_strip_32: -904419506
+      BigMan_Death_strip_33: 1259874421
+      BigMan_Death_strip_34: -584171018
+      BigMan_Death_strip_35: 681052027
+      BigMan_Death_strip_36: -1205083737
+      BigMan_Death_strip_37: 1515245784
+      BigMan_Death_strip_38: 997160193
+      BigMan_Death_strip_39: 453363575
+      BigMan_Death_strip_4: 528420149
+      BigMan_Death_strip_5: -177107487
+      BigMan_Death_strip_6: 186170001
+      BigMan_Death_strip_7: 1517622257
+      BigMan_Death_strip_8: 444252969
+      BigMan_Death_strip_9: -1378026554
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

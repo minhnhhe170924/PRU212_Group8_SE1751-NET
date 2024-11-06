@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour {
     public UnityEvent<int, int> healthChanged;
+
+    public UnityEvent<int, Vector2> damageableHit;
+    public UnityEvent damageableDeath;
+
     Animator animator;
 
     [SerializeField]
@@ -17,19 +21,25 @@ public class Damageable : MonoBehaviour {
             _maxHeath = value;
 
             healthChanged?.Invoke(_health, MaxHealth);
+    
         }
     }
 
     [SerializeField]
     private int _health = 100;
 
-    public int Health {
-        get {
+
+    public int Health
+    {
+        get
+        {
             return _health;
         }
-        set {
+        set
+        {
             _health = value;
-            if (_health <= 0) {
+            if (_health <= 0)
+            {
                 IsAlive = false;
             }
         }
@@ -39,27 +49,64 @@ public class Damageable : MonoBehaviour {
     private bool _isAlive = true;
     [SerializeField]
     private bool isInvincible = false;
+
+
+    //public bool IsHit {
+    //    get
+    //    {
+    //        return animator.GetBool(AnimationStrings.isHit);
+    //    }
+
+    //    private set 
+    //    {
+    //        animator.SetBool(AnimationStrings.isHit, value);
+    //    } }
+
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    public bool IsAlive {
-        get {
+    public bool IsAlive
+    {
+        get
+        {
             return _isAlive;
         }
-        set {
+        set
+        {
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive: " + value);
+
+            if (value == false)
+            {
+                damageableDeath.Invoke();
+            }
         }
     }
 
-    private void Awake() {
+    public bool LockVelocity
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.lockVelocity);
+        }
+        set
+        {
+            animator.SetBool(AnimationStrings.lockVelocity, value);
+        }
+    }
+
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
 
-    private void Update() {
-        if (isInvincible) {
-            if (timeSinceHit > invincibilityTime) {
+    private void Update()
+    {
+        if (isInvincible)
+        {
+            if (timeSinceHit > invincibilityTime)
+            {
                 // Invincibility has worn off
                 isInvincible = false;
                 timeSinceHit = 0;
@@ -67,13 +114,23 @@ public class Damageable : MonoBehaviour {
             timeSinceHit += Time.deltaTime;
         }
 
-        Hit(10);
     }
 
-    public void Hit(int damage) {
-        if (IsAlive && !isInvincible) {
+    public bool Hit(int damage, Vector2 knockback)
+    {
+        if (IsAlive && !isInvincible)
+        {
             Health -= damage;
             isInvincible = true;
+
+            // if the object is alive and can be hitTrigger, invoke the event
+            animator.SetTrigger(AnimationStrings.hitTrigger);
+            LockVelocity = true;
+            damageableHit?.Invoke(damage, knockback);
+
+            return true;
         }
+        // if the object is not alive or is invincible, return false
+        return false;
     }
 }

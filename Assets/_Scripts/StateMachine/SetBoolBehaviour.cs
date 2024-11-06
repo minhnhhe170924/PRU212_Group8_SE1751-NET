@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SetBoolBehaviour : StateMachineBehaviour
@@ -22,6 +23,10 @@ public class SetBoolBehaviour : StateMachineBehaviour
         if (updateOnState)
         {
             animator.SetBool(boolName, onExitValue);
+            if(stateInfo.IsName("player_switch_gravity"))
+            {
+                animator.gameObject.transform.localScale *= new Vector2(1, -1);
+            }
         }
     }
 
