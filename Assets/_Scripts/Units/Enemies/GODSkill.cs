@@ -2,23 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class GODSkill : MonoBehaviour
 {
-    public int damage = 15;
-    public Vector2 moveSpeed = new Vector2(7f, 0);
+    public int damage = 20;
     public Vector2 knockback = Vector2.zero;
-
-    Rigidbody2D rb;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Start()
-    {
-        rb.velocity = new Vector2(moveSpeed.x * transform.localScale.x, moveSpeed.y);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,7 +21,7 @@ public class Projectile : MonoBehaviour
             {
                 Debug.Log("Hit: " + collision.name + " for " + damage);
 
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }
