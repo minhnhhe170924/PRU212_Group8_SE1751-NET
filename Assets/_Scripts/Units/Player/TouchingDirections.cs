@@ -75,12 +75,33 @@ public class TouchingDirections : MonoBehaviour
         }
     }
 
-    private Vector2 wallCheckDirection => gameObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+    private Vector2 wallCheckDirection
+    {
+        get
+        {
+            int checkVal = 0;
+
+            if (gameObject.CompareTag("GOD"))
+            {
+                checkVal = 1;
+            }
+            else if (gameObject.CompareTag("Knight"))
+            {
+                checkVal = -1;
+            }
+            else if (gameObject.CompareTag("BigMan"))
+            {
+                checkVal = -1;
+            }
+
+            return gameObject.transform.localScale.x == checkVal ? Vector2.left : Vector2.right;
+        }
+    }
     private Vector2 groundCheckDirection
     {
         get
         {
-            if(GravitySwitched)
+            if (GravitySwitched)
             {
                 return Vector2.up;
             }

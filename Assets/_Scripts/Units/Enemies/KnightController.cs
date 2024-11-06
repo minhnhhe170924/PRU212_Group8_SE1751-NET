@@ -7,7 +7,7 @@ using UnityEngine;
 public class KnightController : MonoBehaviour
 {
     public float walkAcceleration = 30f;
-    public float maxSpeed = 5f;
+    public float maxSpeed = 4f;
 
     public DetectionZone attackZone;
     public DetectionZone cliffDetectionZone;
@@ -16,11 +16,11 @@ public class KnightController : MonoBehaviour
     TouchingDirections touchingDirections;
     Animator animator;
     Damageable damageable;
-    Vector2 walkDirectionVector = Vector2.right;
+    Vector2 walkDirectionVector = Vector2.left;
 
     public enum WalkableDirection { Right, Left };
 
-    private WalkableDirection _walkableDirection = WalkableDirection.Right;
+    private WalkableDirection _walkableDirection = WalkableDirection.Left;
 
     public WalkableDirection WalkDirection
     {
