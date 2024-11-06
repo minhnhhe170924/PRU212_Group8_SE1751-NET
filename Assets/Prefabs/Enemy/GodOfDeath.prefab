@@ -422,6 +422,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkAcceleration: 30
   maxSpeed: 3
+  castSkillPower: 30
+  castSkillingTime: 0.1
+  castingSkillCooldownMin: 2
+  castingSkillCooldownMax: 5
+  GODSkillPrefab: {fileID: 3036558688026445938, guid: 9a6d960599e84df4086d47d2aff9dbec, type: 3}
   attackZone: {fileID: 4514426787563745143}
   cliffDetectionZone: {fileID: 4093037326131654367}
 --- !u!114 &5966505232605742347
