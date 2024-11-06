@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Damageable : MonoBehaviour
-{
+public class Damageable : MonoBehaviour {
+    public UnityEvent<int, int> healthChanged;
+
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
 
@@ -12,20 +13,19 @@ public class Damageable : MonoBehaviour
 
     [SerializeField]
     private int _maxHeath = 100;
-    public int MaxHealth
-    {
-        get
-        {
+    public int MaxHealth {
+        get {
             return _maxHeath;
         }
-        set
-        {
+        set {
             _maxHeath = value;
+    
         }
     }
 
     [SerializeField]
     private int _health = 100;
+
 
     public int Health
     {
@@ -36,6 +36,7 @@ public class Damageable : MonoBehaviour
         set
         {
             _health = value;
+            healthChanged?.Invoke(_health, MaxHealth);
             if (_health <= 0)
             {
                 IsAlive = false;
@@ -47,6 +48,7 @@ public class Damageable : MonoBehaviour
     private bool _isAlive = true;
     [SerializeField]
     private bool isInvincible = false;
+
 
     //public bool IsHit {
     //    get
@@ -110,6 +112,7 @@ public class Damageable : MonoBehaviour
             }
             timeSinceHit += Time.deltaTime;
         }
+
     }
 
     public bool Hit(int damage, Vector2 knockback)
