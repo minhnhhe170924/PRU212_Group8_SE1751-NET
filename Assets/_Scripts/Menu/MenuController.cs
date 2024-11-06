@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
     public void Play()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("TienNQ");
         //PlayerPrefs.SetInt("passLevelEasy", 0);
         //PlayerPrefs.SetInt("HighScoreEasy", 0);
     }
