@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5416484, y: 1.4386835}
+  m_Offset: {x: 1.0444375, y: 1.1090713}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.721225, y: 4.932921}
+  m_Size: {x: 3.609474, y: 4.273698}
   m_EdgeRadius: 0
 --- !u!114 &4514426787563745143
 MonoBehaviour:
@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 8518620197222512550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25314903, y: -3.4660087, z: 0}
+  m_LocalPosition: {x: -1.45, y: -0.3, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -536,16 +536,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.21463108, y: 0.51668394}
-      - {x: 0.1937027, y: 1.3360147}
-      - {x: -0.46566176, y: 2.3220031}
-      - {x: -1.0973096, y: 1.9890544}
-      - {x: -0.36875868, y: 1.3198819}
-      - {x: -0.36966133, y: 0.52453923}
-      - {x: -0.97950155, y: 0.45123902}
-      - {x: -0.9962604, y: 0.0632478}
-      - {x: 0.8763628, y: 0.08834028}
-      - {x: 0.86408794, y: 0.41575116}
+    - - {x: 4.5842347, y: 1.1963644}
+      - {x: 3.6598823, y: 2.2777483}
+      - {x: 0.16729707, y: 3.2043092}
+      - {x: -1.7529883, y: 2.7013073}
+      - {x: 0.12229574, y: 2.0209074}
+      - {x: 1.797198, y: 1.21327}
+      - {x: 1.7234786, y: -0.33682346}
+      - {x: 2.8158188, y: -1.4960481}
+      - {x: 3.9354887, y: -1.0952502}
+      - {x: 4.899877, y: -0.35233027}
   m_UseDelaunayMesh: 0
 --- !u!114 &8238077891137762155
 MonoBehaviour:
@@ -559,5 +559,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74fbba7d5af2f1418f7acd0321dcbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 35
   knockback: {x: 0, y: 0}
