@@ -141,7 +141,6 @@ public class BigManController : MonoBehaviour
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
 
-
     public void OnCLiffDeteced()
     {
         if(touchingDirections.IsGrounded)
