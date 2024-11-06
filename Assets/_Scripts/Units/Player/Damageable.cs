@@ -19,8 +19,6 @@ public class Damageable : MonoBehaviour {
         }
         set {
             _maxHeath = value;
-
-            healthChanged?.Invoke(_health, MaxHealth);
     
         }
     }
@@ -38,6 +36,7 @@ public class Damageable : MonoBehaviour {
         set
         {
             _health = value;
+            healthChanged?.Invoke(_health, MaxHealth);
             if (_health <= 0)
             {
                 IsAlive = false;

@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour {
     private void Awake() {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if(player != null ) {
+        if(player == null ) {
             Debug.Log("Player not found in this scene");
         }
         playerDamageable = player.GetComponent<Damageable>();
@@ -23,7 +23,8 @@ public class HealthBar : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+        Debug.Log(playerDamageable.Health);
+        Debug.Log(playerDamageable.MaxHealth);
         healthSlider.value = CalculateSliderPercentage(playerDamageable.Health, playerDamageable.MaxHealth);
         healthBarText.text = "HP " + playerDamageable.Health + " / " + playerDamageable.MaxHealth;
     }
@@ -33,10 +34,12 @@ public class HealthBar : MonoBehaviour {
     }
 
     private void OnEnable() {
+        Debug.Log("OnEnable");
         playerDamageable.healthChanged.AddListener(OnPlayerHealthChanged);
     }
 
     private void OnDisable() {
+        Debug.Log("OnDisable");
         playerDamageable.healthChanged.RemoveListener(OnPlayerHealthChanged);
     }
 
@@ -46,6 +49,7 @@ public class HealthBar : MonoBehaviour {
     }
 
     private void OnPlayerHealthChanged(int newHealth, int maxHealth) {
+        Debug.Log("Health change");
         healthSlider.value = CalculateSliderPercentage(newHealth, maxHealth);
         healthBarText.text = "HP " + newHealth + " / " + maxHealth;
     }

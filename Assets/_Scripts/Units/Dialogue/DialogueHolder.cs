@@ -8,6 +8,7 @@ namespace DialogueSystem {
         private void Awake() {
             StartCoroutine(dialogueSequence());
         }
+
         private IEnumerator dialogueSequence() {
             for(int i = 0; i< transform.childCount; i++) {
                 Deactivate();
