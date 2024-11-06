@@ -454,11 +454,11 @@ MonoBehaviour:
   damageableDeath:
     m_PersistentCalls:
       m_Calls: []
-  _maxHeath: 300
-  _health: 300
+  _maxHeath: 700
+  _health: 700
   _isAlive: 1
   isInvincible: 0
-  invincibilityTime: 0.25
+  invincibilityTime: 0.5
 --- !u!1 &8518620197222512550
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +542,11 @@ PolygonCollider2D:
       - {x: -1.7529883, y: 2.7013073}
       - {x: 0.12229574, y: 2.0209074}
       - {x: 1.797198, y: 1.21327}
-      - {x: 1.7234786, y: -0.33682346}
+      - {x: 1.3973997, y: -0.7046362}
+      - {x: 0.7266642, y: -0.41890377}
+      - {x: 0.21191514, y: -0.78611517}
+      - {x: 1.2432678, y: -1.4773214}
+      - {x: 2.1972415, y: -0.55787575}
       - {x: 2.8158188, y: -1.4960481}
       - {x: 3.9354887, y: -1.0952502}
       - {x: 4.899877, y: -0.35233027}
@@ -560,4 +564,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 35
-  knockback: {x: 0, y: 0}
+  knockback: {x: 0, y: 1}
