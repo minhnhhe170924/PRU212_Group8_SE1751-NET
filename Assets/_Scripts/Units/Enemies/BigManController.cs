@@ -16,11 +16,11 @@ public class BigManController : MonoBehaviour
     TouchingDirections touchingDirections;
     Animator animator;
     Damageable damageable;
-    Vector2 walkDirectionVector = Vector2.left;
+    Vector2 walkDirectionVector = Vector2.right;
 
     public enum WalkableDirection { Right, Left };
 
-    private WalkableDirection _walkableDirection = WalkableDirection.Left;
+    private WalkableDirection _walkableDirection = WalkableDirection.Right;
 
     public WalkableDirection WalkDirection
     {
