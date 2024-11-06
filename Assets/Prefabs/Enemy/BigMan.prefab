@@ -299,9 +299,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectedColliders: []
+<<<<<<< HEAD
   noColisionRemain:
     m_PersistentCalls:
       m_Calls: []
+=======
+>>>>>>> TienNQ
 --- !u!1 &7325499374767235718
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +420,11 @@ GameObject:
   - component: {fileID: 9137446074598199496}
   - component: {fileID: 1913774405913276075}
   - component: {fileID: 3337491539717490998}
+<<<<<<< HEAD
   - component: {fileID: 8857155437798577270}
+=======
+  - component: {fileID: 5836763071896258441}
+>>>>>>> TienNQ
   m_Layer: 8
   m_Name: BigMan
   m_TagString: BigMan
@@ -435,13 +442,16 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.39, y: -0.97, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 12394360010676843}
   - {fileID: 51878362021657030}
+<<<<<<< HEAD
   - {fileID: 5426031621024802807}
   - {fileID: 1379993384287297396}
+=======
+>>>>>>> TienNQ
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5681797237070042564
@@ -626,8 +636,12 @@ MonoBehaviour:
   walkAcceleration: 30
   maxSpeed: 3
   attackZone: {fileID: 6321127154870758439}
+<<<<<<< HEAD
   cliffDetectionZone: {fileID: 297604491316830719}
 --- !u!114 &8857155437798577270
+=======
+--- !u!114 &5836763071896258441
+>>>>>>> TienNQ
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -636,11 +650,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7516347441503049017}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: d07aa5e15213d3a44a7b95468fe1f716, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 17d952182bb828747822d2748cda2b2b, type: 3}
+>>>>>>> TienNQ
   m_Name: 
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
+<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 3337491539717490998}
         m_TargetAssemblyTypeName: BigManController, Assembly-CSharp
@@ -656,6 +675,8 @@ MonoBehaviour:
         m_CallState: 2
   damageableDeath:
     m_PersistentCalls:
+=======
+>>>>>>> TienNQ
       m_Calls: []
   _maxHeath: 100
   _health: 100

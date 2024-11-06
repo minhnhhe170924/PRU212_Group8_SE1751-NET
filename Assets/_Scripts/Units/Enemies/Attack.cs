@@ -6,7 +6,9 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
     //Collider2D attackCollier2D;
+
     public int attackDamage = 10;
+
     public Vector2 knockback = Vector2.zero;
     //private void Awake()
     //{

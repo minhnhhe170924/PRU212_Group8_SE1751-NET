@@ -148,8 +148,14 @@ public class AdventurerController : PlayerUnitBase
         dashingTrail = GetComponent<TrailRenderer>();
     }
 
+    private void Update()
+    {
+
+    }
+
     private void FixedUpdate()
     {
+
         if(isDashing)
         {
             return;
@@ -250,6 +256,7 @@ public class AdventurerController : PlayerUnitBase
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
     }
+
 
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
