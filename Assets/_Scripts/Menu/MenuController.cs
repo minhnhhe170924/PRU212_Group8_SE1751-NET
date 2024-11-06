@@ -9,13 +9,13 @@ public class MenuController : MonoBehaviour
     public void Play()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("TienNQ");
         //PlayerPrefs.SetInt("passLevelEasy", 0);
         //PlayerPrefs.SetInt("HighScoreEasy", 0);
     }
     public void AboutUs()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("AboutUs");
     }
     public void Replay()
     {
@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
     public void ExitToMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
 
     }
     public void Exit()
@@ -40,6 +40,10 @@ public class MenuController : MonoBehaviour
     public void Instruction()
     {
         SceneManager.LoadScene(8);
+    }
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
     }
     //public void PauseGame()
     //{
