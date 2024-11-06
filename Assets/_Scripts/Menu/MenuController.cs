@@ -41,6 +41,10 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(8);
     }
+    public void Settings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
     //public void PauseGame()
     //{
     //    Time.timeScale = 0;
