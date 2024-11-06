@@ -81,7 +81,11 @@ public class TouchingDirections : MonoBehaviour
         {
             int checkVal = 0;
 
-            if (gameObject.CompareTag("GOD"))
+            if (gameObject.CompareTag("Player"))
+            {
+                checkVal = -1;
+            }
+            else if (gameObject.CompareTag("GOD"))
             {
                 checkVal = 1;
             }
