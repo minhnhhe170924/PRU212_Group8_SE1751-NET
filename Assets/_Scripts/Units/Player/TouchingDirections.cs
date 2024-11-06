@@ -98,7 +98,13 @@ public class TouchingDirections : MonoBehaviour
                 checkVal = -1;
             }
 
-            return gameObject.transform.localScale.x == checkVal ? Vector2.left : Vector2.right;
+
+            if(checkVal > 0)
+            {
+                return gameObject.transform.localScale.x > 0 ? Vector2.left : Vector2.right;
+            }
+
+            return gameObject.transform.localScale.x < 0 ? Vector2.left : Vector2.right;
         }
     }
     private Vector2 groundCheckDirection
