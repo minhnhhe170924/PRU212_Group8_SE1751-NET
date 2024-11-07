@@ -9,8 +9,9 @@ public class MenuController : MonoBehaviour
     public void Play()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("TienNQ");
-        //PlayerPrefs.SetInt("passLevelEasy", 0);
+        SceneManager.LoadScene("LevelOfMenu");
+        PlayerPrefs.SetInt("passLevelEasy", 1);
+        //PlayerPrefs.SetInt("passLevelMedium", 0);
         //PlayerPrefs.SetInt("HighScoreEasy", 0);
     }
     public void AboutUs()
@@ -19,13 +20,21 @@ public class MenuController : MonoBehaviour
     }
     public void Replay()
     {
-        //SceneManager.LoadScene(PlayerController.instance.currentScencePlay);
-        PlayerPrefs.SetFloat("totalHeartsAfterdie", 3);
+        var currenrsceenReplay =PlayerPrefs.GetString("currentScenceRePlay");
+        SceneManager.LoadScene(currenrsceenReplay);
     }
     public void NextLevel()
     {
-        //SceneManager.LoadScene(PlayerController.instance.currentScencePlay+1);
-        PlayerPrefs.SetFloat("totalHeartsAfterdie", 3);
+        var currentScencePlay = PlayerPrefs.GetString("currentScenceNextLevel");
+        if (currentScencePlay.Equals("LevelEasy"))
+        {
+            SceneManager.LoadScene("LevelMedium");
+        }
+        if (currentScencePlay.Equals("LevelMedium"))
+        {
+            SceneManager.LoadScene("LevelHard");
+        }
+        
     }
     public void ExitToMenu()
     {
@@ -39,20 +48,23 @@ public class MenuController : MonoBehaviour
     }
     public void Instruction()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene("Instruction");
     }
+    public void PlayEasy()
+    {
+        SceneManager.LoadScene("GameStory");
+    }
+    public void PlayMedium()
+    {
+        SceneManager.LoadScene("LevelMedium");
+    }
+    public void PlayHard()
+    {
+        SceneManager.LoadScene("LevelHard");
+    }
+
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
     }
-    //public void PauseGame()
-    //{
-    //    Time.timeScale = 0;
-    //    pauseMenuScence.SetActive(true);
-    //}
-    //public void Resume()
-    //{
-    //    Time.timeScale = 1;
-    //    pauseMenuScence.SetActive(false);
-    //}
 }

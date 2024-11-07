@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class AdventurerController : PlayerUnitBase
@@ -249,11 +250,22 @@ public class AdventurerController : PlayerUnitBase
     public void OnHit(int damage, Vector2 knockback)
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        if (damageable.Health <= 0)
+        {
+            StartCoroutine(Death());
+        }
+    }
+    private IEnumerator Death()
+    {
+        yield return new WaitForSeconds(2f);
+        var currentScencePlay = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("currentScenceRePlay", currentScencePlay);
+        SceneManager.LoadScene("GameOver");
     }
 
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && PlayerPrefs.GetInt("passLevelEasy", 0) == 1)
         {
             animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
         }
@@ -261,7 +273,7 @@ public class AdventurerController : PlayerUnitBase
 
     public void OnSwitchGravity(InputAction.CallbackContext context)
     {
-        if (context.started && !isSwitchGravityActive && CanMove && touchingDirections.IsGrounded)
+        if (context.started && !isSwitchGravityActive && CanMove && touchingDirections.IsGrounded && PlayerPrefs.GetInt("passLevelMedium", 0) == 1)
         {
             SwitchGravity();
             isSwitchGravityActive = true;
@@ -279,7 +291,7 @@ public class AdventurerController : PlayerUnitBase
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        if (context.started && CanMove && canDash)
+        if (context.started && CanMove && canDash && PlayerPrefs.GetInt("passLevelMedium", 0) == 1)
         {
             animator.SetTrigger(AnimationStrings.dashTrigger);
             StartCoroutine(Dash());
