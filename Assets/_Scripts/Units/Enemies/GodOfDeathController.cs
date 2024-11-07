@@ -39,10 +39,29 @@ public class GodOfDeathController : MonoBehaviour
         {
             if (_walkableDirection != value)
             {
+                GameObject GODHealthBar = gameObject;
+                Transform oriHealthBar = GODHealthBar.transform;
+
+
+                if (gameObject.CompareTag("GOD"))
+                {
+                    GODHealthBar = gameObject.transform.Find("Canvas/HealthBar").gameObject;
+                    oriHealthBar = GODHealthBar.transform;
+                }
+
+
                 gameObject.transform.localScale = new Vector2(
                     gameObject.transform.localScale.x * -1,
                     gameObject.transform.localScale.y
                     );
+
+                if (gameObject.CompareTag("GOD"))
+                {
+                    GODHealthBar.transform.localScale = new Vector2(
+                            oriHealthBar.localScale.x * -1,
+                            oriHealthBar.localScale.y
+                            );
+                }
 
                 if (value == WalkableDirection.Left)
                 {
@@ -123,7 +142,7 @@ public class GodOfDeathController : MonoBehaviour
                     maxSpeed),
                     rb.velocity.y);
 
-                if(canCastSkill)
+                if (canCastSkill)
                 {
                     animator.SetTrigger(AnimationStrings.castSkillTrigger);
                     StartCoroutine(CastSkill());
