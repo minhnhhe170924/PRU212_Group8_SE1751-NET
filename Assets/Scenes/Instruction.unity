@@ -1613,7 +1613,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1728767022}
-        m_TargetAssemblyTypeName: FunctionOfMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: ExitToMenu
         m_Mode: 1
         m_Arguments:
@@ -2778,7 +2778,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1728767018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6133bda4b6c30bd47881b9ba78510c14, type: 3}
+  m_Script: {fileID: 11500000, guid: fa4e3aa140e861140afc1e2f1025642c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1851001117
