@@ -12,6 +12,11 @@ public class CoinManager : MonoBehaviour
 
     [SerializeField]
     private int scores;
+    [SerializeField]
+    private TMP_Text CoinDisplay;
+
+    [SerializeField]
+    private int coin;
 
     private void Awake()
     {
@@ -28,11 +33,13 @@ public class CoinManager : MonoBehaviour
     private void OnGUI()
     {
         scoreDisplay.text = scores.ToString();
+        CoinDisplay.text = coin.ToString();
     }
 
     public void addScore(int score)
     {
         scores += score;
+        coin += 1;
 
     }
     public void minusScore(int score)
@@ -50,5 +57,9 @@ public class CoinManager : MonoBehaviour
     public void Reset()
     {
         scores = 0;
+    }
+    public int GetScoreEndGamme()
+    {
+        return scores;
     }
 }
